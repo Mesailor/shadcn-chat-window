@@ -4,7 +4,7 @@ import { ChatWindowMessages } from "./chat-window/chat-window-messages";
 
 export function ChatWindowExampleComponent() {
   return (
-    <div className="h-full max-h-screen overflow-auto overscroll-none flex flex-col justify-between">
+    <div className="h-full max-h-screen overflow-none flex flex-col">
       <ChatWindowHeader />
       <ChatWindowMessages />
       <ChatWindowInput />
