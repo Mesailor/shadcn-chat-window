@@ -22,7 +22,7 @@ export function ChatWindowHeader() {
       )}
     >
       <div className="flex items-center gap-2">
-        <Avatar className="rounded-full">
+        <Avatar className="rounded-full size-6">
           <AvatarImage
             src="https://github.com/evilrabbit.png"
             alt="@evilrabbit"
