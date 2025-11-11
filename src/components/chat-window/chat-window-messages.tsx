@@ -84,13 +84,17 @@ function PrimaryMessage({
         className
       )}
     >
-      <Avatar className="rounded-full size-10 mt-1 mx-1">
-        <AvatarImage src={avatarSrc} alt={avatarAlt} />
-        <AvatarFallback>{avatarFallback}</AvatarFallback>
-      </Avatar>
+      <div className="w-10 @md/chat-window:w-12 mt-1 shrink-0">
+        <Avatar className="rounded-full size-8 @md/chat-window:size-10 mx-auto">
+          <AvatarImage src={avatarSrc} alt={avatarAlt} />
+          <AvatarFallback>{avatarFallback}</AvatarFallback>
+        </Avatar>
+      </div>
       <div className="flex flex-col">
         <div className="flex items-baseline gap-2">
-          <p className="font-medium">{senderName}</p>
+          <p className="font-medium text-sm @md/chat-window:text-base">
+            {senderName}
+          </p>
           <p className="text-xs text-muted-foreground">
             {/* 07.09.2020, 16:28 */}
             {new Intl.DateTimeFormat("en-US", {
@@ -99,7 +103,7 @@ function PrimaryMessage({
             }).format(timestamp)}
           </p>
         </div>
-        <p>{content}</p>
+        <p className="text-sm @md/chat-window:text-base">{content}</p>
       </div>
     </div>
   );
@@ -116,7 +120,7 @@ function AdditionalMessage({
     <div className="group/same-user-message shrink-0 flex gap-2 hover:bg-accent rounded-md px-2 py-0.5">
       <div
         className={cn(
-          "shrink-0 w-12 text-[10px] text-muted-foreground text-right leading-6",
+          "shrink-0 w-10 @md/chat-window:w-12 text-[8px] @md/chat-window:text-[10px] text-muted-foreground text-right leading-6",
           "group-hover/same-user-message:visible invisible"
         )}
       >
@@ -125,7 +129,7 @@ function AdditionalMessage({
           timeStyle: "short",
         }).format(timestamp)}
       </div>
-      <span>{content}</span>
+      <span className="text-sm @md/chat-window:text-base">{content}</span>
     </div>
   );
 }

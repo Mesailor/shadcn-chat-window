@@ -39,16 +39,22 @@ export function ChatWindowHeader() {
       </div>
       <div className="flex items-center gap-1.5">
         {/* Additional header actions can be added here */}
-        <InputGroup className="sm:flex hidden">
+        <InputGroup className="@2xl/chat-window:flex hidden">
           <InputGroupInput placeholder="Search..." />
           <InputGroupAddon>
             <SearchIcon />
           </InputGroupAddon>
         </InputGroup>
-        <Button variant="ghost" className="size-8 sm:inline-flex hidden">
+        <Button
+          variant="ghost"
+          className="size-8 @2xl/chat-window:inline-flex hidden"
+        >
           <PhoneIcon />
         </Button>
-        <Button variant="ghost" className="size-8 sm:inline-flex hidden">
+        <Button
+          variant="ghost"
+          className="size-8 @2xl/chat-window:inline-flex hidden"
+        >
           <VideoIcon />
         </Button>
         <Button variant="ghost" className="size-8">

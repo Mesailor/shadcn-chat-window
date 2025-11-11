@@ -18,8 +18,8 @@ export function ChatWindowInput() {
         )}
       >
         <div className="h-10 row-start-1 col-start-1 flex items-center gap-1.5">
-          <Button variant="ghost" className="size-9">
-            <PlusIcon className="size-6 stroke-[1.7px]" />
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <PlusIcon className="size-5 @md/chat-window:size-6 stroke-[1.7px]" />
           </Button>
         </div>
 
@@ -27,20 +27,20 @@ export function ChatWindowInput() {
           <Textarea
             id="toolbar-input"
             placeholder="Type your message..."
-            className="h-fit min-h-10 px-1 resize-none md:text-base border-none shadow-none focus-visible:border-none focus-visible:ring-0"
+            className="h-fit min-h-10 max-h-30 px-1 resize-none @md/chat-window:text-base border-none shadow-none focus-visible:border-none focus-visible:ring-0 placeholder:whitespace-nowrap"
             rows={1}
           />
         </div>
 
-        <div className="h-10 row-start-1 col-start-3 flex items-center gap-1.5">
-          <Button variant="ghost" className="size-9">
-            <GiftIcon className="size-5 stroke-[1.7px]" />
+        <div className="h-10 row-start-1 col-start-3 flex items-center gap-1 @md/chat-window:gap-1.5">
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <GiftIcon className="size-4 @md/chat-window:size-5 stroke-[1.7px]" />
           </Button>
-          <Button variant="ghost" className="size-9">
-            <CalendarDaysIcon className="size-5 stroke-[1.7px]" />
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <CalendarDaysIcon className="size-4 @md/chat-window:size-5 stroke-[1.7px]" />
           </Button>
-          <Button variant="ghost" className="size-9">
-            <SquareChevronRightIcon className="size-5 stroke-[1.7px]" />
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <SquareChevronRightIcon className="size-4 @md/chat-window:size-5 stroke-[1.7px]" />
           </Button>
         </div>
       </div>
