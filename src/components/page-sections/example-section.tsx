@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 
 const SCREEN_SIZES = {
-  desktop: { width: "100%", height: "800px" },
-  tablet: { width: 768, height: 1024 },
+  desktop: { width: "100%", height: 667 },
+  tablet: { width: 768, height: 667 },
   smartphone: { width: 375, height: 667 },
   chatbox: { width: 344, height: 344 },
 };
@@ -30,7 +30,7 @@ export function ExampleSection() {
     useState<keyof typeof SCREEN_SIZES>("desktop");
 
   return (
-    <section className="mt-16 w-full px-6 space-y-4 flex flex-col items-center">
+    <section className="h-[800px] mt-16 w-full px-6 space-y-4 flex flex-col items-center">
       <ButtonGroup>
         {BUTTONS.map((button) => (
           <Button

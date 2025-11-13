@@ -1,7 +1,11 @@
 import {
+  CalendarDaysIcon,
+  GiftIcon,
   MoreHorizontalIcon,
   PhoneIcon,
+  PlusIcon,
   SearchIcon,
+  SquareChevronRightIcon,
   VideoIcon,
 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -17,7 +21,12 @@ import {
   ChatWindowHeaderEnd,
   ChatWindowHeaderStart,
 } from "./chat-window-header";
-import { ChatWindowInput } from "./chat-window-input";
+import {
+  ChatWindowToolbar,
+  ChatWindowToolbarAddonEnd,
+  ChatWindowToolbarAddonStart,
+  ChatWindowToolbarTextarea,
+} from "./chat-window-toolbar";
 import { ChatWindowMessages } from "./chat-window-messages";
 import { Button } from "../ui/button";
 
@@ -67,7 +76,26 @@ export function ChatWindowExampleComponent() {
       </ChatWindowHeader>
 
       <ChatWindowMessages />
-      <ChatWindowInput />
+
+      <ChatWindowToolbar>
+        <ChatWindowToolbarAddonStart>
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <PlusIcon className="size-5 @md/chat-window:size-6 stroke-[1.7px]" />
+          </Button>
+        </ChatWindowToolbarAddonStart>
+        <ChatWindowToolbarTextarea />
+        <ChatWindowToolbarAddonEnd>
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <GiftIcon className="size-4 @md/chat-window:size-5 stroke-[1.7px]" />
+          </Button>
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <CalendarDaysIcon className="size-4 @md/chat-window:size-5 stroke-[1.7px]" />
+          </Button>
+          <Button variant="ghost" className="size-8 @md/chat-window:size-9">
+            <SquareChevronRightIcon className="size-4 @md/chat-window:size-5 stroke-[1.7px]" />
+          </Button>
+        </ChatWindowToolbarAddonEnd>
+      </ChatWindowToolbar>
     </ChatWindow>
   );
 }
