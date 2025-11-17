@@ -14,6 +14,7 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "../ui/input-group";
+import { Button } from "../ui/button";
 import { ChatWindow } from "./chat-window";
 import {
   ChatWindowHeader,
@@ -27,8 +28,12 @@ import {
   ChatWindowToolbarAddonStart,
   ChatWindowToolbarTextarea,
 } from "./chat-window-toolbar";
-import { ChatWindowMessages } from "./chat-window-messages";
-import { Button } from "../ui/button";
+import { ChatMessages } from "./chat-messages";
+import { MESSAGES } from "@/data/messages";
+import { Fragment } from "react/jsx-runtime";
+import { PrimaryMessage } from "./message-items/primary-message";
+import { DateItem } from "./message-items/date-item";
+import { AdditionalMessage } from "./message-items/additional-message";
 
 export function ChatWindowExampleComponent() {
   return (
@@ -75,7 +80,55 @@ export function ChatWindowExampleComponent() {
         </ChatWindowHeaderEnd>
       </ChatWindowHeader>
 
-      <ChatWindowMessages />
+      <ChatMessages className="p-2">
+        {MESSAGES.map((msg, i, msgs) => {
+          // If date changed, show date item
+          if (
+            new Date(msg.timestamp).toDateString() !==
+            new Date(msgs[i + 1]?.timestamp).toDateString()
+          ) {
+            return (
+              <Fragment key={msg.id}>
+                <PrimaryMessage
+                  avatarSrc={msg.sender.avatarUrl}
+                  avatarAlt={msg.sender.username}
+                  avatarFallback={msg.sender.name.slice(0, 2)}
+                  senderName={msg.sender.name}
+                  content={msg.content}
+                  timestamp={msg.timestamp}
+                />
+                <DateItem timestamp={msg.timestamp} className="my-4" />
+              </Fragment>
+            );
+          }
+
+          // If next item is same user, show additional
+          if (msg.sender.id === msgs[i + 1]?.sender.id) {
+            return (
+              <AdditionalMessage
+                key={msg.id}
+                content={msg.content}
+                timestamp={msg.timestamp}
+              />
+            );
+          }
+          // Else, show primary
+          else {
+            return (
+              <PrimaryMessage
+                className="mt-4"
+                key={msg.id}
+                avatarSrc={msg.sender.avatarUrl}
+                avatarAlt={msg.sender.username}
+                avatarFallback={msg.sender.name.slice(0, 2)}
+                senderName={msg.sender.name}
+                content={msg.content}
+                timestamp={msg.timestamp}
+              />
+            );
+          }
+        })}
+      </ChatMessages>
 
       <ChatWindowToolbar>
         <ChatWindowToolbarAddonStart>
