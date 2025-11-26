@@ -80,7 +80,7 @@ export function ChatWindowExampleComponent() {
         </ChatWindowHeaderEnd>
       </ChatWindowHeader>
 
-      <ChatMessages className="p-2">
+      <ChatMessages className="py-2">
         {MESSAGES.map((msg, i, msgs) => {
           // If date changed, show date item
           if (
