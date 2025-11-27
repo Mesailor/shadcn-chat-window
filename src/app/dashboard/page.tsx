@@ -1,5 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import { ChatWindowExampleComponent } from "@/components/chat-window/chat-window-example-component";
+import { ChatWindowExampleComponent } from "@/components/chat/examples/chat-example-component";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export default function Page() {

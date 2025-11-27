@@ -32,7 +32,7 @@ export function PrimaryMessage({
   return (
     <ChatEvent className={cn("hover:bg-accent", className)}>
       <ChatEventAddon>
-        <Avatar className="rounded-full size-8 @md/chat-window:size-10 mx-auto">
+        <Avatar className="rounded-full size-8 @md/chat:size-10 mx-auto">
           <AvatarImage src={avatarSrc} alt={avatarAlt} />
           <AvatarFallback>{avatarFallback}</AvatarFallback>
         </Avatar>

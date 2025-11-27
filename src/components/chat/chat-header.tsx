@@ -3,7 +3,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-export function ChatWindowHeader({
+export function ChatHeader({
   children,
   className,
   ...props
@@ -21,7 +21,7 @@ export function ChatWindowHeader({
   );
 }
 
-export function ChatWindowHeaderStart({
+export function ChatHeaderStart({
   children,
   className,
   ...props
@@ -33,7 +33,7 @@ export function ChatWindowHeaderStart({
   );
 }
 
-export function ChatWindowHeaderMain({
+export function ChatHeaderMain({
   children,
   className,
   ...props
@@ -45,7 +45,7 @@ export function ChatWindowHeaderMain({
   );
 }
 
-export function ChatWindowHeaderEnd({
+export function ChatHeaderEnd({
   children,
   className,
   ...props

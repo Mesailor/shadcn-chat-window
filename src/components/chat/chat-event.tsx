@@ -19,7 +19,7 @@ export function ChatEventAddon({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("w-10 @md/chat-window:w-12 mt-1 shrink-0", className)}
+      className={cn("w-10 @md/chat:w-12 mt-1 shrink-0", className)}
       {...props}
     >
       {children}
@@ -45,10 +45,7 @@ export function ChatEventContent({
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <div
-      className={cn("text-sm @md/chat-window:text-base", className)}
-      {...props}
-    >
+    <div className={cn("text-sm @md/chat:text-base", className)} {...props}>
       {children}
     </div>
   );
@@ -61,7 +58,7 @@ export function ChatEventTitle({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("font-medium text-sm @md/chat-window:text-base", className)}
+      className={cn("font-medium text-sm @md/chat:text-base", className)}
       {...props}
     >
       {children}

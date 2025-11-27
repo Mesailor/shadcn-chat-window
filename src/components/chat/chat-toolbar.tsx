@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Textarea } from "../ui/textarea";
 
-export function ChatWindowToolbar({
+export function ChatToolbar({
   children,
   className,
   ...props
@@ -28,7 +28,7 @@ export function ChatWindowToolbar({
   );
 }
 
-export function ChatWindowToolbarAddonStart({
+export function ChatToolbarAddonStart({
   children,
   className,
   ...props
@@ -48,7 +48,7 @@ export function ChatWindowToolbarAddonStart({
   );
 }
 
-export function ChatWindowToolbarTextarea({
+export function ChatToolbarTextarea({
   className,
   ...props
 }: React.ComponentProps<typeof Textarea>) {
@@ -58,7 +58,7 @@ export function ChatWindowToolbarTextarea({
         id="toolbar-input"
         placeholder="Type your message..."
         className={cn(
-          "h-fit min-h-10 max-h-30 px-1 @md/chat-window:text-base",
+          "h-fit min-h-10 max-h-30 px-1 @md/chat:text-base",
           "border-none shadow-none focus-visible:border-none focus-visible:ring-0 placeholder:whitespace-nowrap resize-none",
           className
         )}
@@ -69,7 +69,7 @@ export function ChatWindowToolbarTextarea({
   );
 }
 
-export function ChatWindowToolbarAddonEnd({
+export function ChatToolbarAddonEnd({
   children,
   className,
   ...props
@@ -79,7 +79,7 @@ export function ChatWindowToolbarAddonEnd({
   return (
     <div
       className={cn(
-        "h-10 row-start-1 col-start-3 flex items-center gap-1 @md/chat-window:gap-1.5",
+        "h-10 row-start-1 col-start-3 flex items-center gap-1 @md/chat:gap-1.5",
         className
       )}
       {...props}

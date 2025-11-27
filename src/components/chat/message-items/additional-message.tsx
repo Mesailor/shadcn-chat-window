@@ -17,7 +17,7 @@ export function AdditionalMessage({
   return (
     <ChatEvent className="hover:bg-accent group">
       <ChatEventAddon>
-        <ChatEventDescription className="text-right text-[8px] @md/chat-window:text-[10px] group-hover:visible invisible">
+        <ChatEventDescription className="text-right text-[8px] @md/chat:text-[10px] group-hover:visible invisible">
           {/* 16:08 */}
           {new Intl.DateTimeFormat("en-US", {
             timeStyle: "short",

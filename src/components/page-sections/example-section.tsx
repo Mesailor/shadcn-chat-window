@@ -1,6 +1,6 @@
 "use client";
 
-import { ChatWindowExampleComponent } from "@/components/chat-window/chat-window-example-component";
+import { ChatExampleComponent } from "@/components/chat/examples/chat-example-component";
 import { ReactNode, useState } from "react";
 import { ButtonGroup } from "../ui/button-group";
 import { Button } from "../ui/button";
@@ -50,7 +50,7 @@ export function ExampleSection() {
           height: SCREEN_SIZES[screenSize].height,
         }}
       >
-        <ChatWindowExampleComponent />
+        <ChatExampleComponent />
       </div>
     </section>
   );
