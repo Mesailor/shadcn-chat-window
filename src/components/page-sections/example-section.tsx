@@ -32,7 +32,7 @@ export function ExampleSection() {
     useState<keyof typeof SCREEN_SIZES>("desktop");
 
   return (
-    <section className="h-[800px] mt-16 w-full px-6 space-y-4 flex flex-col items-center">
+    <section className="h-[800px] py-8 w-full px-6 space-y-4 flex flex-col items-center">
       <div className="relative w-full flex justify-center">
         <ButtonGroup>
           {BUTTONS.map((button) => (
