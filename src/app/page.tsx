@@ -1,4 +1,4 @@
-import { UsageExampleSection } from "@/components/page-sections/usage-example-section";
+import { UsageExampleSection } from "@/components/page-sections/usage-example/usage-example-section";
 import { ExampleSection } from "@/components/page-sections/example-section";
 
 export default function Home() {
