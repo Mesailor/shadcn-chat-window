@@ -1,3 +1,4 @@
+import { EventUsageExample } from "./event-usage-example";
 import { HeaderUsageExample } from "./header-usage-example";
 import { MessagesUsageExample } from "./messages-usage-example";
 
@@ -8,6 +9,7 @@ export function UsageExampleSection() {
 
       <HeaderUsageExample />
       <MessagesUsageExample />
+      <EventUsageExample />
     </section>
   );
 }
