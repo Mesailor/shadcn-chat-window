@@ -9,7 +9,10 @@ export function ChatMessages({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("flex-1 flex flex-col-reverse overflow-auto", className)}
+      className={cn(
+        "flex-1 flex flex-col-reverse overflow-auto py-2",
+        className
+      )}
       {...props}
     >
       {children}

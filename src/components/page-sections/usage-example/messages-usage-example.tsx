@@ -14,7 +14,7 @@ const codeString = `    <Chat>
         ...
       </ChatHeader>
 
-      <ChatMessages className="py-2">
+      <ChatMessages>
         {MESSAGES.map((msg, i, msgs) => {
           // If date changed, show date item
           if (
