@@ -1,6 +1,7 @@
 import { EventUsageExample } from "./event-usage-example";
 import { HeaderUsageExample } from "./header-usage-example";
 import { MessagesUsageExample } from "./messages-usage-example";
+import { ToolbarUsageExample } from "./toolbar-usage-example";
 
 export function UsageExampleSection() {
   return (
@@ -10,6 +11,7 @@ export function UsageExampleSection() {
       <HeaderUsageExample />
       <MessagesUsageExample />
       <EventUsageExample />
+      <ToolbarUsageExample />
     </section>
   );
 }
