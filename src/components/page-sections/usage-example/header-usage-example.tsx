@@ -33,9 +33,7 @@ export function HeaderUsageExample() {
             />
             <AvatarFallback>ER</AvatarFallback>
           </Avatar>
-          <div className="flex flex-col">
-            <span className="font-medium">Evil Rabbit</span>
-          </div>
+          <span className="font-medium">Evil Rabbit</span>
         </ChatHeaderStart>
         <ChatHeaderMain>
           <span className="text-sm font-semibold">AKA</span>
@@ -75,9 +73,7 @@ const codeString = `   <Chat>
             />
             <AvatarFallback>ER</AvatarFallback>
           </Avatar>
-          <div className="flex flex-col">
-            <span className="font-medium">Evil Rabbit</span>
-          </div>
+          <span className="font-medium">Evil Rabbit</span>
         </ChatHeaderStart>
         <ChatHeaderMain>
           <span className="text-sm font-semibold">AKA</span>
